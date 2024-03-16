@@ -8,13 +8,17 @@ use Illuminate\Database\Eloquent\Collection;
 
 class DeveloperRepository implements DeveloperInterface
 {
+    public function __construct(protected Developer $developer)
+    {
+    }
+
     public function all(): Collection
     {
-        return Developer::all();
+        return $this->developer->all();
     }
 
     public function insert(array $items): void
     {
-        Developer::insert($items);
+        $this->developer->insert($items);
     }
 }

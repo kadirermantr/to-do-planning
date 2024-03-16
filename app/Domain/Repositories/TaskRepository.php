@@ -8,9 +8,13 @@ use App\Models\Task;
 
 class TaskRepository implements TaskInterface
 {
+    public function __construct(protected Task $task)
+    {
+    }
+
     public function all()
     {
-        return Task::all();
+        return $this->task->all();
     }
 
     public function getFromProvider(string $provider): array
@@ -20,13 +24,13 @@ class TaskRepository implements TaskInterface
         return $provider->getTasks();
     }
 
-    public function insert(array $tasks): void
+    public function insert(array $items): void
     {
-        Task::insert($tasks);
+        $this->task->insert($items);
     }
 
     public function truncate(): void
     {
-        Task::truncate();
+        $this->task->truncate();
     }
 }
