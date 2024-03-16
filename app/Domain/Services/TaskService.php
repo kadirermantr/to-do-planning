@@ -3,6 +3,7 @@
 namespace App\Domain\Services;
 
 use App\Domain\Repositories\TaskRepository;
+use Illuminate\Database\Eloquent\Collection;
 
 class TaskService
 {
@@ -11,7 +12,7 @@ class TaskService
     ) {
     }
 
-    public function all()
+    public function all(): Collection
     {
         return $this->taskRepository->all();
     }
