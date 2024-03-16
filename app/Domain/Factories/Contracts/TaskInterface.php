@@ -8,7 +8,7 @@ interface TaskInterface
 
     public function getFromProvider(string $provider);
 
-    public function insert(array $tasks);
+    public function insert(array $items);
 
     public function truncate();
 }

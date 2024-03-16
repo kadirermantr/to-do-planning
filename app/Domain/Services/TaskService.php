@@ -21,9 +21,9 @@ class TaskService
         return $this->taskRepository->getFromProvider($provider);
     }
 
-    public function insert(array $tasks): void
+    public function insert(array $items): void
     {
-        $this->taskRepository->insert($tasks);
+        $this->taskRepository->insert($items);
     }
 
     public function truncateTable(): void
