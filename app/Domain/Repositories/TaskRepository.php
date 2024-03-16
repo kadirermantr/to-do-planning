@@ -2,10 +2,11 @@
 
 namespace App\Domain\Repositories;
 
+use App\Domain\Factories\Contracts\TaskInterface;
 use App\Domain\Factories\ProviderFactory;
 use App\Models\Task;
 
-class TaskRepository
+class TaskRepository implements TaskInterface
 {
     public function getTasks(string $provider): array
     {
