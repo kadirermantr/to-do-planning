@@ -14,12 +14,12 @@ class TaskRepository
         return $provider->getTasks();
     }
 
-    public function insert(array $tasks)
+    public function insert(array $tasks): void
     {
         Task::insert($tasks);
     }
 
-    public function truncate()
+    public function truncate(): void
     {
         Task::truncate();
     }

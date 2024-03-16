@@ -11,17 +11,17 @@ class TaskService
     ) {
     }
 
-    public function get(string $provider)
+    public function get(string $provider): array
     {
         return $this->taskRepository->getTasks($provider);
     }
 
-    public function insert(array $tasks)
+    public function insert(array $tasks): void
     {
         $this->taskRepository->insert($tasks);
     }
 
-    public function truncateTable()
+    public function truncateTable(): void
     {
         $this->taskRepository->truncate();
     }
