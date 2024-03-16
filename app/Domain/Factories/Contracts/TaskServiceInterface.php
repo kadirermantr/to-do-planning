@@ -2,7 +2,7 @@
 
 namespace App\Domain\Factories\Contracts;
 
-interface TaskInterface
+interface TaskServiceInterface
 {
     public function all();
 

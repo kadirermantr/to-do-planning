@@ -2,10 +2,11 @@
 
 namespace App\Domain\Services;
 
+use App\Domain\Factories\Contracts\TaskServiceInterface;
 use App\Domain\Repositories\TaskRepository;
 use Illuminate\Database\Eloquent\Collection;
 
-class TaskService
+class TaskService implements TaskServiceInterface
 {
     public function __construct(
         protected TaskRepository $taskRepository,
@@ -29,6 +30,6 @@ class TaskService
 
     public function truncateTable(): void
     {
-        $this->taskRepository->truncate();
+        $this->taskRepository->truncateTable();
     }
 }

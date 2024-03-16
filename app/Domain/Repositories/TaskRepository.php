@@ -30,7 +30,7 @@ class TaskRepository implements TaskInterface
         $this->task->insert($items);
     }
 
-    public function truncate(): void
+    public function truncateTable(): void
     {
         $this->task->truncate();
     }

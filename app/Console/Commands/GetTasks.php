@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Domain\Services\TaskService;
+use App\Domain\Factories\Contracts\TaskServiceInterface;
 use Illuminate\Console\Command;
 
 class GetTasks extends Command
@@ -12,7 +12,7 @@ class GetTasks extends Command
     protected $description = 'Gets tasks, process them and save to the database.';
 
     public function __construct(
-        protected TaskService $taskService,
+        protected TaskServiceInterface $taskService,
     ) {
         parent::__construct();
     }
