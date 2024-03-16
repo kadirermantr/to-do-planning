@@ -8,7 +8,7 @@ use App\Models\Task;
 
 class TaskRepository implements TaskInterface
 {
-    public function getTasks(string $provider): array
+    public function getFromProvider(string $provider): array
     {
         $provider = ProviderFactory::create($provider);
 

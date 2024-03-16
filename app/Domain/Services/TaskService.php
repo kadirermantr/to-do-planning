@@ -11,9 +11,9 @@ class TaskService
     ) {
     }
 
-    public function get(string $provider): array
+    public function getFromProvider(string $provider): array
     {
-        return $this->taskRepository->getTasks($provider);
+        return $this->taskRepository->getFromProvider($provider);
     }
 
     public function insert(array $tasks): void

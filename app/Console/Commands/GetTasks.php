@@ -29,7 +29,7 @@ class GetTasks extends Command
         $providers = $this->getProviders();
 
         foreach ($providers as $provider) {
-            $tasks = $this->taskService->get($provider);
+            $tasks = $this->taskService->getFromProvider($provider);
 
             $this->taskService->insert($tasks);
         }
