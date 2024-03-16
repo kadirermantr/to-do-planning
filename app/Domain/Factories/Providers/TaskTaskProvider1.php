@@ -2,11 +2,11 @@
 
 namespace App\Domain\Factories\Providers;
 
-use App\Domain\Factories\Contracts\ProviderInterface;
+use App\Domain\Factories\Contracts\TaskProviderInterface;
 use App\Trait\TransformTasksTrait;
 use Illuminate\Support\Facades\Http;
 
-class TaskProvider1 implements ProviderInterface
+class TaskTaskProvider1 implements TaskProviderInterface
 {
     use TransformTasksTrait;
 
