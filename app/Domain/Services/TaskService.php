@@ -11,6 +11,11 @@ class TaskService
     ) {
     }
 
+    public function all()
+    {
+        return $this->taskRepository->all();
+    }
+
     public function getFromProvider(string $provider): array
     {
         return $this->taskRepository->getFromProvider($provider);
