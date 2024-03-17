@@ -14,7 +14,7 @@ class TaskAssignedRepository implements TaskAssignedInterface
 
     public function all(): Collection
     {
-        return $this->task->all();
+        return $this->task->with('task', 'developer')->get();
     }
 
     public function insert(array $items): void
