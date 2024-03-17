@@ -40,6 +40,38 @@
             </table>
         </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 my-5">
+            <h2 class="text-center mb-4">Task List</h2>
+
+            <div class="accordion" id="developerTasksAccordion">
+                @foreach ($summaries as $developerId => $summary)
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading{{ $developerId }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $developerId }}" aria-expanded="true" aria-controls="collapse{{ $developerId }}">
+                                {{ $summary['developer_name'] }}
+                            </button>
+                        </h2>
+
+                        <div id="collapse{{ $developerId }}" class="accordion-collapse collapse" aria-labelledby="heading{{ $developerId }}" data-bs-parent="#developerTasksAccordion">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    @foreach($summary['tasks'] as $task)
+                                        <li class="list-group-item">
+                                            Task Name: {{ $task->task->name }},
+                                            Difficulty: {{ $task->task->difficulty }},
+                                            Duration: {{ $task->task->duration }}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
 </div>
 
 

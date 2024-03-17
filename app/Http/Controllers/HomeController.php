@@ -22,6 +22,7 @@ class HomeController extends Controller
         $summaries = collect($tasks)->groupBy('developer_id')->map(function ($tasks) {
             return [
                 'developer_name' => $tasks->first()->developer->name,
+                'tasks' => $tasks,
                 'task_count' => $tasks->count(),
                 'duration' => $tasks->sum('duration'),
             ];
