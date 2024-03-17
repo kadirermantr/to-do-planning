@@ -15,6 +15,6 @@ class TaskProvider1 implements TaskProviderInterface
         $request = Http::get('https://run.mocky.io/v3/27b47d79-f382-4dee-b4fe-a0976ceda9cd');
         $data = $request->json();
 
-        return $this->transformData($data, 'id', 'zorluk', 'sure');
+        return $this->transformData($data, 'id', 'zorluk', 'sure', 'provider1');
     }
 }
