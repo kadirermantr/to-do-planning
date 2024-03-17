@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 mt-5">
-            <h2 class="text-center mb-4">Developer Task Summary</h2>
+            <h2 class="text-center mb-4">Task Summary</h2>
 
             <table class="table table-responsive-sm table-striped table-bordered">
                 <thead>
