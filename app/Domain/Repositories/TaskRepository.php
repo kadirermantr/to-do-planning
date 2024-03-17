@@ -32,6 +32,6 @@ class TaskRepository implements TaskInterface
 
     public function truncateTable(): void
     {
-        $this->task->truncate();
+        $this->task->delete();
     }
 }
